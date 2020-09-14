@@ -52,10 +52,10 @@
     border-radius: 1pc;
     background: url(../img/utatasquad.jpg) ;
     background-repeat: no-repeat;
+    background-size: contain;
 }
 .playpad{
     background: url(../img/play_padding.jpg);
-    height: 100%;
     width: 10%;
     float: right;
     opacity: 30%;
@@ -103,4 +103,5 @@ p{
     position: absolute;
     background-repeat: no-repeat;
     top: 0;
+    z-index: -1;
 }

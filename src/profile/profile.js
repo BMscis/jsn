@@ -2,18 +2,24 @@ import _, { forEach } from 'lodash';
 import './profile.css';
 import {topbutton} from '../content/content'
 import {pagetitle} from '../content/content'
-import  mo from '../img/mo_profile.jpg';
-import joyce from '../img/joyce_profile.jpg'
-import  mo_hover from '../img/mo_profile_hover.jpg';
-import joyce_hover from '../img/joyce_profile_hover.jpg'
-import mary from '../img/mary_profile.jpg'
-import mary_hover from '../img/mary_profile_hover.jpg'
-import caleb from '../img/caleb_profile.jpg'
-import caleb_hover from '../img/caleb_profile_hover.jpg'
+import  mo from '../img/mo.svg';
+import joyce from '../img/joyce.svg'
+import mary from '../img/marys.svg'
+import caleb from '../img/caleb.svg'
 import joyce_avatar from '../img/joyceavatar.jpg'
 import mo_avatar from '../img/moavatar.jpg'
 import caleb_avatar from '../img/calebavatar.jpg'
 import mary_avatar from '../img/maryavatar.jpg'
+function passport(){
+    const passp = document.createElement('div');
+    passp.classList.add('passport')
+    return passp
+}
+function textblock(){
+    const textblk = document.createElement('div');
+    textblk.classList.add('textdiv')
+    return textblk
+}
 function passportblock(){
     const pass_block = document.createElement('div');
     pass_block.classList.add('passportblock');
@@ -22,10 +28,10 @@ function passportblock(){
 }
 function staffprofile(){
     var images = [
-        [joyce,joyce_hover,'joycebio'], 
-        [mo,mo_hover,'mobio'],
-        [mary, mary_hover,'marybio'],
-        [caleb, caleb_hover,'calebio']
+        [joyce,'JOYCE','joycebio'], 
+        [mo,'MO','mobio'],
+        [mary,'MARY','marybio'],
+        [caleb, 'CALEB','calebio']
     ];
     const staff_profile = document.createElement('div');
     staff_profile.classList.add('staffprofile')
@@ -37,12 +43,18 @@ function staffprofile(){
 
     images.forEach(element => {
         let passport_b = passportblock();
-        passport_b.setAttribute('style', "background-image:url(" +element[0]+")")
-        passport_b.onmouseover = function(){passport_b.setAttribute('style', "background-image:url("+element[1]+")")}
-        passport_b.onmouseout = function(){passport_b.setAttribute('style', "background-image:url("+element[0]+")")}
+        let passportdiv = passport();
+        let tb = textblock();
+        passportdiv.setAttribute('style', "background-image:url("+element[0]+")")
+        tb.innerHTML = element[1]
+        // passport_b.setAttribute('style', "background-image:url(" +element[0]+")")
+        // passport_b.onmouseover = function(){passport_b.setAttribute('style', "background-image:url("+element[1]+")")}
+        // passport_b.onmouseout = function(){passport_b.setAttribute('style', "background-image:url("+element[0]+")")}
         passport_b.addEventListener('click',e=>{
             document.getElementById(element[2]).scrollIntoView();
         })
+        passport_b.appendChild(passportdiv);
+        passport_b.appendChild(tb);
         staff_profile.appendChild(passport_b);
     });
     return staff_profile
@@ -73,7 +85,9 @@ function avatarblock(){
     const ava = document.createElement('div');
     ava.classList.add('avatarblock');
     let avaprofiles = avatarprofiles();
-    ava.appendChild(topbutton());
+    let bt = topbutton();
+    bt.innerHTML='top';
+    ava.appendChild(bt);
     ava.appendChild(avaprofiles);
     return ava
 }

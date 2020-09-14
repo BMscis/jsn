@@ -65,6 +65,8 @@ function latest (){
     let tw = twitter();
     let btn = topbutton();
 
+    btn.innerHTML = 'top';
+
     lates.appendChild(pag_til);
     lates.appendChild(tw);
     lates.appendChild(pag_til2);
