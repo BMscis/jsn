@@ -1,0 +1,37 @@
+{
+  "name": "jsn",
+  "version": "1.0.0",
+  "description": "jsn web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --open --config webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BMscis/jsn.git"
+  },
+  "author": "BMscis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BMscis/jsn/issues"
+  },
+  "homepage": "https://github.com/BMscis/jsn#readme",
+  "devDependencies": {
+    "css-loader": "^4.3.0",
+    "csv-loader": "^3.0.3",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "style-loader": "^1.2.1",
+    "uninstall": "0.0.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "xml-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.4"
+  }
+}

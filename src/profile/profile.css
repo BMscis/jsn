@@ -1,0 +1,47 @@
+.profile{
+    width: -webkit-fill-available;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    position: relative;
+}
+.avatarblock, .staffprofile{
+    width: 50%;
+    height: 100%;
+}
+.avatarblock{
+    box-shadow: 0 1px 4px black;
+    border-radius: 1pc;
+}
+
+.avatarprofiles,.avatar{
+    width: -webkit-fill-available;
+    height: 236px;
+    background-repeat: no-repeat;
+}
+.avatarprofiles{
+    display: -webkit-box;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.pagetitle{
+    font-family: Agency FB;
+    font-size:2vw;
+    margin:auto;
+    text-align: center;
+    font-weight: 600;
+}
+.passportblock{
+    width: 70%;
+    height: 93px;
+    background-repeat: no-repeat;
+    padding: 0.5em;
+    margin: 1vh;
+    transition: 0.5s ease-in-out;
+    position: relative;
+}
+.passportblock:hover{
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
