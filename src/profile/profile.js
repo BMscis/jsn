@@ -2,18 +2,18 @@ import _, { forEach } from 'lodash';
 import './profile.css';
 import {topbutton} from '../content/content'
 import {pagetitle} from '../content/content'
-import  mo from '../img/mo_profile.svg';
-import joyce from '../img/joyce_profile.svg'
-import  mo_hover from '../img/mo_profile_hover.svg';
-import joyce_hover from '../img/joyce_profile_hover.svg'
-import mary from '../img/mary_profile.svg'
-import mary_hover from '../img/mary_profile_hover.svg'
-import caleb from '../img/caleb_profile.svg'
-import caleb_hover from '../img/caleb_profile_hover.svg'
-import joyce_avatar from '../img/joyceavatar.svg'
-import mo_avatar from '../img/moavatar.svg'
-import caleb_avatar from '../img/calebavatar.svg'
-import mary_avatar from '../img/maryavatar.svg'
+import  mo from '../img/mo_profile.jpg';
+import joyce from '../img/joyce_profile.jpg'
+import  mo_hover from '../img/mo_profile_hover.jpg';
+import joyce_hover from '../img/joyce_profile_hover.jpg'
+import mary from '../img/mary_profile.jpg'
+import mary_hover from '../img/mary_profile_hover.jpg'
+import caleb from '../img/caleb_profile.jpg'
+import caleb_hover from '../img/caleb_profile_hover.jpg'
+import joyce_avatar from '../img/joyceavatar.jpg'
+import mo_avatar from '../img/moavatar.jpg'
+import caleb_avatar from '../img/calebavatar.jpg'
+import mary_avatar from '../img/maryavatar.jpg'
 function passportblock(){
     const pass_block = document.createElement('div');
     pass_block.classList.add('passportblock');
