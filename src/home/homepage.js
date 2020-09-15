@@ -14,10 +14,10 @@ function menubar(){
     let catalog = menutext();
 
     catalog.addEventListener("click", e=>{
-        document.getElementById("content").scrollIntoView();
+        document.getElementById("catalog").scrollIntoView();
     })
     contactus.addEventListener("click", e=>{
-        document.getElementById("content").scrollIntoView();
+        document.getElementById("contactus").scrollIntoView();
     })
     aboutus.addEventListener("click", e=>{
         document.getElementById("aboutus").scrollIntoView();

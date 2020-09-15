@@ -105,3 +105,37 @@ p{
     top: 0;
     z-index: -1;
 }
+@media only screen and (max-width: 800px){
+    .home{
+        width: -webkit-fill-available;
+        flex-wrap:nowrap;
+        flex-direction: column;
+    }
+    .headingtext{
+        font-size: initial;
+    }
+    .menutext{
+        font-size: xx-small;
+    }
+    .visualbar{
+        width: -webkit-fill-available;
+        font-size: xx-small;
+    }
+    .textblock{
+        width: initial;
+        height: initial;
+    }
+    .articletext{
+        font-size: xx-large;
+        padding: 0.5em;
+    }
+    .flames{
+        height: 24vw;
+        width: 20vw;
+    }
+    p{
+        font-size: x-large;
+    }
+    
+
+}

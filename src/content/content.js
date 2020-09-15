@@ -28,6 +28,7 @@ function catalog(){
 
     let pag_til = pagetitle();
     pag_til.innerHTML = "CATALOG";
+    pag_til.setAttribute('id','catalog')
     let vid_card = videos();
     catal.appendChild(pag_til)
     catal.appendChild(vid_card);
@@ -61,6 +62,7 @@ function latest (){
     let pag_til2 = pagetitle();
     pag_til2.classList.add('contact');
     pag_til2.innerHTML = "CONTACT US";
+    pag_til2.setAttribute('id','contactus')
     let pad = latestpad();
     let tw = twitter();
     let btn = topbutton();
