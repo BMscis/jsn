@@ -120,6 +120,7 @@ p{
     .visualbar{
         width: -webkit-fill-available;
         font-size: xx-small;
+        height: 300px;
     }
     .textblock{
         width: initial;
