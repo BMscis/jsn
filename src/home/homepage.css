@@ -12,7 +12,7 @@
     width: -webkit-fill-available;
     display: flex;
     flex-direction: column;
-    background-color: #760D95;
+    background-color: white;
     justify-content: center;
     margin-bottom: 1vh;
 }
@@ -20,7 +20,7 @@
     margin:auto;
     font-family: 'Segoe UI Symbol';
     width: fit-content;
-    color:white;
+    color:#760D95;
     
     font-size: 2vw;
 }
@@ -28,21 +28,27 @@
     width: 87%;
     margin: auto;
     height: 30%;
-    background-color: transparent;
+    background-image: repeating-radial-gradient(#227a8e17, transparent 100px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1em;
     align-items: center;
+    border-radius: 100%;
 }
 .menutext{
     font-family: Segoe UI;
-    color: white;
+    color: #760D95;
     font-size: 1vw;
     font-weight: 700;
+    filter:opacity(0.5);
 }
 .menutext:hover{
+    filter:opacity(1);
     cursor: pointer;
+}
+.menutext:visited{
+    filter: hue-rotate(45deg);
 }
 .visualbar{
     width: 55vw;
