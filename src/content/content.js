@@ -1,37 +1,24 @@
 import _ from 'lodash';
 import './content.css'
-
+import '../components/card/card'
+import { card } from '../components/card/card';
 function pagetitle(){
     const page_title =  document.createElement('div')
     page_title.classList.add('pagetitle')
     return page_title
 }
 export {pagetitle}
-function videocard(){
-    const movie = document.createElement('div');
-    movie.classList.add('videocard')
-    
-    return movie
-}
-function videos(){
-    const vid  =  document.createElement('div');
-    vid.classList.add('videos');
-    
-    let video_card = videocard();
-    vid.appendChild(video_card);
 
-    return vid
-}
+
 function catalog(){
     const catal = document.createElement('div');
     catal.classList.add('catalog')
-
+    catal.setAttribute('id', 'catalog')
     let pag_til = pagetitle();
-    pag_til.innerHTML = "CATALOG";
-    pag_til.setAttribute('id','catalog')
-    let vid_card = videos();
+    let cardz = card();
+    
+    catal.appendChild(cardz)
     catal.appendChild(pag_til)
-    catal.appendChild(vid_card);
     return catal
 }
 function latestpad(){
@@ -48,7 +35,7 @@ function topbutton(){
     const topbutton =  document.createElement('button');
     topbutton.classList.add('topbutton');
     topbutton.addEventListener('click', e=>{
-        document.getElementById('home').scrollIntoView();
+        window.scrollTo(0,0);
     })
     return topbutton
 }
@@ -56,19 +43,18 @@ export {topbutton}
 function latest (){
     const lates = document.createElement('div');
     lates.classList.add('latest');
+    lates.setAttribute('id','latest');
     
     let pag_til = pagetitle();
     pag_til.innerHTML = "WHAT'S NEW!";
     let pag_til2 = pagetitle();
     pag_til2.classList.add('contact');
     pag_til2.innerHTML = "CONTACT US";
-    pag_til2.setAttribute('id','contactus')
     let pad = latestpad();
     let tw = twitter();
     let btn = topbutton();
 
     btn.innerHTML = 'top';
-
     lates.appendChild(pag_til);
     lates.appendChild(tw);
     lates.appendChild(pag_til2);
@@ -76,15 +62,31 @@ function latest (){
     lates.appendChild(pad);
     return lates
 }
+function latestholder(){
+    const ld = document.createElement('div');
+    ld.classList.add('ld')
+
+
+    let late_st = latest();
+    ld.appendChild(late_st);
+
+    return ld
+}
 function content(){
     const contents = document.createElement('div');
     contents.classList.add('content')
     contents.setAttribute("id","content")
     let cata_log = catalog();
-    let late_st = latest();
-
+    let lt_holdr = latestholder();
+    
+    contents.addEventListener('click',e=>{
+        let menu_ls = document.getElementsByClassName('menulist')[0]
+        if(menu_ls.classList.contains('active')){
+            menu_ls.classList.remove('active')
+        }
+    
+    })
     contents.appendChild(cata_log);
-    contents.appendChild(late_st);
     return contents
 }
 

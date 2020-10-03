@@ -1,16 +1,24 @@
 .profile{
     width: -webkit-fill-available;
-    height: 100vh;
+    height: calc(100vh - 13.5vmin);
     display: flex;
     flex-direction: row;
-    padding: 1em;
     position: relative;
+    scroll-margin-top: 14vmin;
 }
-.avatarblock, .staffprofile{
+.ah, .staffprofile{
+    padding: 10vmin;
     width: 50%;
-    height: 100%;
+}
+
+.staffprofile{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 .avatarblock{
+    width: 100%;
+    height: 100%;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
     border-radius: 1pc;
     position: relative;
@@ -21,57 +29,99 @@
     height: 236px;
     background-repeat: no-repeat;
 }
+.avatar{
+    width: 45vmin;
+    height: 45vmin;
+    background-size: contain;
+}
 .avatarprofiles{
     display: -webkit-box;
     overflow: hidden;
     scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
 }
 .pagetitle{
-    font-family: Agency FB;
-    font-size:2vw;
     margin:auto;
     text-align: center;
-    font-weight: 600;
 }
 .passport {
-    width: 93px;
-    height: 93px;
+    width: 10vw;
+    height: 10vw;
     background-size: cover;
 }
 .textdiv{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
     margin-left: 30%;
 }
 .passportblock{
-    overflow: visible;
-    background-color: white;
-    width: 40vw;
-    transform: matrix(1,0,0,1,0,0);
-    border-radius: 2pc;
-    margin: 1vw;
-    margin-bottom: 2vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    width: fit-content;
+    filter: brightness(0.5);
+    height: fit-content;
 }
 .passportblock:hover{
     cursor: pointer;
     background-repeat: no-repeat;
     box-shadow: 0 2px 2px 0 rgb(139 25 167 / 16%), 0 0 0 1px rgb(98 50 160 / 8%);
+    filter:brightness(1)
+}
+.passportblock.passportactive{
+    filter: brightness(1)
+}
+ul.avatarul {
+    padding: 0;
+    display: -webkit-box;
+    flex-direction: row;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.cancelbutton{
+    background: url(../img/cancel.svg);
+    border:none;
+    outline:none;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    z-index: 2;
+}
+.cancelbutton:hover{
+    cursor: pointer;
+}
+.avatarcard{
+    height: 100%;
+    width: 100%;
+}
+.avatarcard p{
+    position: unset;
 }
 @media only screen and (max-width: 800px){
     .profile{
-        height: 200vh;
         flex-direction: column;
+        align-items: center;
     }
-    .avatarblock, .staffprofile {
-        width: -webkit-fill-available;
-        height: 100%;
+    .staffprofile{
+        padding: 5vmin;
+        width: calc(100% - 5vmin);
+
+    }
+    .ah {
+        padding: 5vmin;
+        width: calc(100% - 5vmin)
     }
     .passportblock{
         width: initial;
+    }
+    .avatarcard {
+        width: calc(100vw - 5vmin);
+    }
+}
+@media only screen and (max-height: 800px){
+    .profile{
+        height: fit-content;
+        min-height: calc(100vh - 13.5vmin);
     }
 }

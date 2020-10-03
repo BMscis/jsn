@@ -1,85 +1,94 @@
 .home{
-    height: 100vh;
-    /* width: calc(100vw - 1em); */
-    margin:0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 1em;
-    position: relative;
+    height: calc(100vh - 13.5vmin);
 }
 .navbar{
-    width: -webkit-fill-available;
+    width: 100%;
+    height: 13.5vmin;
+    position: sticky;
+    background-color: whitesmoke;
     display: flex;
-    flex-direction: column;
-    background-color: white;
-    justify-content: center;
-    margin-bottom: 1vh;
+    z-index: 2;
+    justify-content: space-between;
+    top:0;
 }
 .headingtext{
-    margin:auto;
-    font-family: 'Segoe UI Symbol';
-    width: fit-content;
-    color:#760D95;
-    
-    font-size: 2vw;
+    margin: auto 46px;
+    color:black;
+    white-space: nowrap;
+    font-size: 3vmin;
+    font-family: adobeClean-BoldCond;
 }
 .menubar{
-    width: 87%;
-    margin: auto;
-    height: 30%;
-    background-image: repeating-radial-gradient(#227a8e17, transparent 100px);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1em;
-    align-items: center;
-    border-radius: 100%;
+    width: fit-content;
+    display: -webkit-inline-box;
+    margin-right: 20px;
 }
 .menutext{
-    font-family: Segoe UI;
-    color: #760D95;
-    font-size: 1vw;
-    font-weight: 700;
-    filter:opacity(0.5);
+    color: black;
+    filter: brightness(2);
+    font-size: 2.7vmin;
+    white-space: nowrap;
+    padding-right: 5vmin;
+    font-family: adobeClean-SemiCn;
 }
+.menubutton{
+    display: none;
+    font-family: Material Icons;
+    font-family: Material Icons;
+    color: black;
+    font-size: xx-large;
+}
+.menulist{
+    display: none;
+    transition: 0.5s ease-in-out;
+}
+
+
 .menutext:hover{
     filter:opacity(1);
     cursor: pointer;
+}
+.menutext .active{
+    border-bottom: inset aquamarine;
 }
 .menutext:visited{
     filter: hue-rotate(45deg);
 }
 .visualbar{
-    width: 55vw;
-    height: 76vh;
-    background-color: black;
-    margin: 1vh;
-    border-radius: 1pc;
-    background: url(../img/utatasquad.jpg) ;
-    background-repeat: no-repeat;
-    background-size: contain;
+    height: 100%;
+    width: 100%;
+    background: url(../img/rectangle.svg);
+    background-size: cover;
+    opacity: 73%;
+    filter: blur(10px);
 }
-.playpad{
-    background: url(../img/play_padding.jpg);
-    width: 10%;
-    float: right;
-    opacity: 30%;
-    display: flex;
+
+h2{
+    color: white;
+    font-family: adobeClean-ExtraBold;
+    position: absolute;
+    font-size: 13.5vmin;
+    z-index: 1;
+    left: 13.5vw;
+    width: 46vw;
 }
-.playpad:hover{
-    background-color: #f1f1f1;
+
+h2:hover{
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.349));
     cursor: pointer;
 }
-.playbutton{
-    background: url(../img/play_button.jpg);
-    width: 45px;
-    height: 45px;
-    margin: auto;
+h2::after{
+    content: "Are you thinking about developing a series?Get in touch with one of our team members for an in depth overview.";
+    font-family: adobeClean-Condlt;
+    position: absolute;
+    top: 100%;
+    right: 13.5vmin;
+    font-size: 3.25vmin;
+    color: white;
+    width: 73vmin;
+    box-sizing: border-box;
 }
-.playbutton:hover{
-    cursor: pointer;
-}
+
 .textblock{
     background-color: transparent;
     width: 25vw;
@@ -89,21 +98,19 @@
     min-height: 200px; */
     margin:1vh;
     border-radius: 1pc;
+    line-height: 1.5;
 }
 .articletext{
-    font-family: opus chords std;
-    font-size: 3vw;
     padding: 1em;
 }
 p{
-    font-family: Agency FB;
-    font-size: 1.5vw;
-    font-weight: 600;
-    padding: 0.5em;
-    margin: 0;
+    font-family: adobeClean-Condlt;
+    color: white;
+    padding: 0 2.7em;
+    position: absolute;
+    top: 73%;
 }
 .flames{
-    background: url(../img/flames.jpg);
     height: 14vw;
     width: 10vw;
     position: absolute;
@@ -117,32 +124,66 @@ p{
         flex-wrap:nowrap;
         flex-direction: column;
     }
-    .headingtext{
-        font-size: initial;
+
+    .menubutton{
+        display: inline;
+        margin-right:27px;
+    }
+    .menulist.active{
+        display: inline-grid;
+        flex-direction: column;
+        position: absolute;
+        top: 13.5vmin;
+        width: 50vmin;
+        height: 70vmin;
+        left: 0;
+        justify-content: space-evenly;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+        background: white;
+        align-items: center;
+    }
+    .menubutton:hover{
+        cursor: pointer;        
+        color: #ff00fff5;
     }
     .menutext{
-        font-size: xx-small;
+        color: black;
+        width: 100%;
+    }
+    .menutext:hover{
+        cursor: pointer;
+        background:rgba(0, 0, 0, 0.274);
+    }
+    .menubar{
+        display: none;
     }
     .visualbar{
-        width: -webkit-fill-available;
-        font-size: xx-small;
-        height: 300px;
+        height: 100%;
     }
     .textblock{
         width: initial;
         height: initial;
     }
     .articletext{
-        font-size: xx-large;
         padding: 0.5em;
     }
     .flames{
         height: 24vw;
         width: 20vw;
     }
-    p{
-        font-size: x-large;
-    }
-    
 
+    h2{
+        width: initial;
+        padding: 0;
+    }
+
+}
+@media only screen and (max-height: 600px){
+    h2{
+        width: initial;
+        padding: 0;
+    }
+    h2::after{
+        padding: 2.7em 0 0 0;
+    }
 }
