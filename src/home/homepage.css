@@ -70,7 +70,6 @@ h2{
     font-size: 13.5vmin;
     z-index: 1;
     left: 13.5vw;
-    width: 46vw;
 }
 
 h2:hover{
@@ -78,7 +77,7 @@ h2:hover{
     cursor: pointer;
 }
 h2::after{
-    content: "Are you thinking about developing a series?Get in touch with one of our team members for an in depth overview.";
+    content: "Are you thinking about developing a series? Get in touch with one of our team members for an in depth overview.";
     font-family: adobeClean-Condlt;
     position: absolute;
     top: 100%;

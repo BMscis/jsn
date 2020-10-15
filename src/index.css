@@ -16,6 +16,7 @@ svg{
 }
 .torsoe{
     overflow-y: auto;
+    overflow-x: hidden;
     position: relative;
     height: -webkit-fill-available;
     width: 100%;

@@ -1,7 +1,8 @@
-import _ from 'lodash';
+import _, { fromPairs } from 'lodash';
 import './content.css'
 import '../components/card/card'
 import { card } from '../components/card/card';
+import {vd} from '../components/videocard/vd'
 function pagetitle(){
     const page_title =  document.createElement('div')
     page_title.classList.add('pagetitle')
@@ -16,8 +17,10 @@ function catalog(){
     catal.setAttribute('id', 'catalog')
     let pag_til = pagetitle();
     let cardz = card();
+    let vdz  =  vd();
     
     catal.appendChild(cardz)
+    catal.appendChild(vdz)
     catal.appendChild(pag_til)
     return catal
 }

@@ -43,7 +43,7 @@ module.exports = {
       },
       //fonts
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        test: /\.(woff|woff2|eot|ttf|otf|mp4)$/,
         use: [
           'file-loader',
         ],
