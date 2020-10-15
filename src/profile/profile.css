@@ -100,7 +100,6 @@ ul.avatarul {
     right: 10px;
     width: 24px;
     height: 24px;
-    z-index: 2;
 }
 .cancelbuttonwhite:hover{
     cursor: pointer;

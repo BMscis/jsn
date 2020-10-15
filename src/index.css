@@ -3,13 +3,17 @@ html{
     scroll-behavior: smooth;
     font-size: 5vmin;
     box-sizing: border-box;
-}
-
-body{
-    margin:0;
     background: url(./img/bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 0 1vmin;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+body{
+    margin:0;
+
 }
 svg{
     width: 100%;
