@@ -95,9 +95,9 @@ ul.avatarul {
     background: url(../img/cancelwhite.svg);
     border:none;
     outline:none;
-    position: absolute;
+    position: relative;
     top:10px;
-    right: 10px;
+    right: 30px;
     width: 24px;
     height: 24px;
 }
@@ -130,6 +130,9 @@ ul.avatarul {
     }
     .avatarcard {
         width: calc(100vw - 5vmin);
+    }
+    .cancelbuttonwhite{
+        right: unset;
     }
 }
 @media only screen and (max-height: 800px){

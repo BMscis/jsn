@@ -10,6 +10,7 @@
     height: 100%;
     scroll-margin-top: 14vmin;
     display: flex;
+    padding-top: 2vmin;
 }
 .ld{
     width: 50%;
