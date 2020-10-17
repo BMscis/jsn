@@ -21,7 +21,6 @@ function catalog(){
     
     catal.appendChild(cardz)
     catal.appendChild(vdz)
-    catal.appendChild(pag_til)
     return catal
 }
 function latestpad(){
