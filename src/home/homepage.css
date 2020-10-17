@@ -57,19 +57,32 @@
 .visualbar{
     height: 100%;
     width: 100%;
-    background: url(../img/rectangle.svg);
+    background-color: white;
+    /* background: url(../img/rectangle.svg); */
     background-size: cover;
-    opacity: 73%;
-    filter: blur(10px);
+    /* opacity: 73%;
+    filter: blur(10px); */
+    display: flex;
+    justify-content: center;
 }
+.visualbar:hover, .visualbar:nth-child(1):hover{
+    opacity: 73%;
+    cursor: pointer;
+}
+.visualbar img{
+    height: 100%;
+    max-width: 100%;
 
+    /* background:url(../img/utatats.jpg); */
+}
 h2{
-    color: white;
+    color: burlywood;
     font-family: adobeClean-ExtraBold;
     position: absolute;
-    font-size: 13.5vmin;
+    font-size: 8vmin;
     z-index: 1;
-    left: 13.5vw;
+    left: 13.5vmin;
+    bottom: 30vmin;
 }
 
 h2:hover{
@@ -83,7 +96,7 @@ h2::after{
     top: 100%;
     right: 13.5vmin;
     font-size: 3.25vmin;
-    color: white;
+    color: black;
     width: 73vmin;
     box-sizing: border-box;
 }

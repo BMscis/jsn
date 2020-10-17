@@ -7,7 +7,6 @@
     scroll-margin-top: 14vmin;
 }
 .ah, .staffprofile{
-    padding: 10vmin;
     width: 50%;
 }
 
@@ -82,8 +81,8 @@ ul.avatarul {
     border:none;
     outline:none;
     position: absolute;
-    top:10px;
-    right: 10px;
+    top: 7vmin;
+    right: 1vmin;
     width: 24px;
     height: 24px;
     z-index: 2;
@@ -95,9 +94,7 @@ ul.avatarul {
     background: url(../img/cancelwhite.svg);
     border:none;
     outline:none;
-    position: relative;
-    top:10px;
-    right: 30px;
+    position: absolute;
     width: 24px;
     height: 24px;
 }
@@ -117,12 +114,10 @@ ul.avatarul {
         align-items: center;
     }
     .staffprofile{
-        padding: 5vmin;
         width: calc(100% - 5vmin);
 
     }
     .ah {
-        padding: 5vmin;
         width: calc(100% - 5vmin)
     }
     .passportblock{

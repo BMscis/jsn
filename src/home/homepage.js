@@ -1,6 +1,8 @@
 import _, { divide } from 'lodash';
 import './homepage.css';
 import fireflame from '../img/flames.svg'
+import umage from '../img/utatats.jpg'
+import umagex from '../img/utatac.svg'
 function header(){
     const header = document.createElement('h1');
     header.classList.add('headingtext');
@@ -105,6 +107,9 @@ function visualbar(){
     const imageblock = document.createElement('div');
     imageblock.classList.add('visualbar');
     imageblock.setAttribute('id','visualbar')
+    let utimag = document.createElement('img')
+    utimag.setAttribute('src', umagex)
+    imageblock.appendChild(utimag)
     return imageblock
 }
 
@@ -147,6 +152,9 @@ function home(){
     let visual_bar=visualbar();
     const header2 = document.createElement('h2')
     header2.innerHTML = "Watch the latest episode of <strong>Utata!</strong>"
+    header2.addEventListener('click',e=>{
+        document.getElementById("catalog").scrollIntoView();
+    })
     home_page.appendChild(header2)
     const p1 = document.createElement('p')
     p1.innerHTML = ''
