@@ -4,13 +4,14 @@ import {content} from'./content/content'
 import {profile} from'./profile/profile'
 import {footer} from './components/footer/footer'
 import './index.css'
-import ood from './img/outofordersign.png'
+import ood from './img/outofordersign.svg'
 
 document.body.classList.add('body');
 document.body.classList.add('closed');
 const outoforder = document.createElement('img')
 outoforder.setAttribute('src', ood)
 outoforder.style.margin = 'auto'
+outoforder.style.width = '50vw'
 document.body.appendChild(outoforder)
 // document.body.appendChild(navbar());
 // function torsoe(){
