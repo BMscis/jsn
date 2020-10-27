@@ -3,7 +3,7 @@ html{
     scroll-behavior: smooth;
     font-size: 5vmin;
     box-sizing: border-box;
-    background: url(./img/bg.svg);
+    /* background: url(./img/bg.svg); */
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100%;
@@ -16,6 +16,10 @@ body{
     margin:0;
     max-width: 100%;
     max-height: 100%;
+}
+body.closed{
+    display: flex;
+    height: 100vh;
 }
 svg{
     width: 100%;
