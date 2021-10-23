@@ -24,15 +24,16 @@ function menulist(){
     let catalog = menutext();
 
     catalog.addEventListener("click", e=>{
-        document.getElementById("catalog").scrollIntoView();
+        document.getElementById("catalog").scrollIntoView({block: "start", inline: "center"});
     })
     home.addEventListener("click", e=>{
-        window.scrollTo(0,0)    })
+        document.getElementById("home").scrollIntoView({block: "start", inline: "center"});  
+    })
     contactus.addEventListener("click", e=>{
-        document.getElementById("contactus").scrollIntoView();
+        document.getElementById("contactus").scrollIntoView({block: "start", inline: "center"});
     })
     aboutus.addEventListener("click", e=>{
-        document.getElementById("aboutus").scrollIntoView();
+        document.getElementById("aboutus").scrollIntoView({block: "start", inline: "center"});
     })
     home.innerHTML = "Home";
     aboutus.innerHTML = "About Us";
@@ -67,15 +68,15 @@ function menubar(){
     let catalog = menutext();
 
     catalog.addEventListener("click", e=>{
-        document.getElementById("catalog").scrollIntoView();
+        document.getElementById("catalog").scrollIntoView({block: "start", inline: "center"});
     })
     home.addEventListener("click", e=>{
-        window.scrollTo(0,0)    })
+        document.getElementById("home").scrollIntoView({block: "start", inline: "center"});  })
     contactus.addEventListener("click", e=>{
-        document.getElementById("contactus").scrollIntoView();
+        document.getElementById("contactus").scrollIntoView({block: "start", inline: "center"});
     })
     aboutus.addEventListener("click", e=>{
-        document.getElementById("aboutus").scrollIntoView();
+        document.getElementById("aboutus").scrollIntoView({block: "start", inline: "center"});
     })
     home.innerHTML = "Home";
     aboutus.innerHTML = "About Us";
@@ -148,14 +149,20 @@ function textblock(){
 }
 function home(){
     const home_page  =  document.createElement('div');
-    home_page.classList.add("home");
-    let visual_bar=visualbar();
+    const textContainer = document.createElement('div')
+    const para = document.createElement('p')
     const header2 = document.createElement('h2')
+
+    textContainer.classList.add('textcontainer')
+    para.classList.add('homeparagraph')
+    para.innerHTML = "Are you thinking about developing a series? Get in touch with one of our team members for an in depth overview."
+    home_page.classList.add("home");
+    home_page.id = "home"
+    let visual_bar=visualbar();
     header2.innerHTML = "Watch the latest episode of <strong>Utata!</strong>"
     header2.addEventListener('click',e=>{
-        document.getElementById("catalog").scrollIntoView();
+        document.getElementById("catalog").scrollIntoView({block: "start", inline: "center"});
     })
-    home_page.appendChild(header2)
     const p1 = document.createElement('p')
     p1.innerHTML = ''
 
@@ -168,6 +175,9 @@ function home(){
     })
 
     home_page.appendChild(visual_bar);
+    textContainer.appendChild(header2)
+    textContainer.appendChild(para)
+    home_page.appendChild(textContainer)
     return home_page
 
 }

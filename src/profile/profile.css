@@ -1,10 +1,7 @@
 .profile{
-    width: -webkit-fill-available;
-    height: calc(100vh - 13.5vmin);
     display: flex;
     flex-direction: row;
     position: relative;
-    scroll-margin-top: 14vmin;
 }
 .ah, .staffprofile{
     width: 50%;
@@ -41,7 +38,6 @@
     width: 100%;
 }
 .pagetitle{
-    margin:auto;
     text-align: center;
 }
 .passport {
@@ -50,12 +46,12 @@
     background-size: cover;
 }
 .textdiv{
-    margin-left: 30%;
 }
 .passportblock{
     width: fit-content;
     filter: brightness(0.5);
     height: fit-content;
+    pointer-events: all;
 }
 .passportblock:hover{
     cursor: pointer;
@@ -67,7 +63,6 @@
     filter: brightness(1)
 }
 ul.avatarul {
-    padding: 0;
     display: -webkit-box;
     flex-direction: row;
     overflow: hidden;
@@ -86,6 +81,7 @@ ul.avatarul {
     width: 24px;
     height: 24px;
     z-index: 2;
+    pointer-events: all;
 }
 .cancelbutton:hover{
     cursor: pointer;
@@ -97,6 +93,9 @@ ul.avatarul {
     position: absolute;
     width: 24px;
     height: 24px;
+    pointer-events: all;
+    left: 10px;
+    top: 10px;
 }
 .cancelbuttonwhite:hover{
     cursor: pointer;
@@ -132,7 +131,5 @@ ul.avatarul {
 }
 @media only screen and (max-height: 800px){
     .profile{
-        height: fit-content;
-        min-height: calc(100vh - 13.5vmin);
     }
 }

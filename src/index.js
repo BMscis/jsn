@@ -17,15 +17,17 @@ document.body.classList.add('body');
  function torsoe(){
      const tor = document.createElement('div');
      tor.classList.add('torsoe')
-     tor.setAttribute('id', 'home')
      tor.appendChild(home());
      tor.appendChild(content());
      tor.appendChild(profile());
+     tor.appendChild(footer());
      return tor
  }
  let tors = torsoe();
- document.body.appendChild(tors);
- document.body.appendChild(footer());
+ let container = document.createElement('div')
+ container.classList.add('container')
+ container.appendChild(tors);
+ document.body.appendChild(container)
  window.addEventListener('scroll', e=>{
      let menu_ls = document.getElementsByClassName('menulist')[0]
      if(menu_ls.classList.contains('active')){

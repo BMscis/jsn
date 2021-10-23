@@ -1,18 +1,15 @@
-.home{
-    height: calc(100vh - 13.5vmin);
-}
 .navbar{
     width: 100%;
     height: 13.5vmin;
-    position: sticky;
+    position: absolute;
     background-color: whitesmoke;
     display: flex;
     z-index: 2;
-    justify-content: space-between;
-    top:0;
+    justify-content: space-around;
+    top: 0;
+    align-items: center;
 }
 .headingtext{
-    margin: auto 46px;
     color:black;
     white-space: nowrap;
     font-size: 3vmin;
@@ -21,15 +18,16 @@
 .menubar{
     width: fit-content;
     display: -webkit-inline-box;
-    margin-right: 20px;
 }
 .menutext{
     color: black;
     filter: brightness(2);
     font-size: 2.7vmin;
     white-space: nowrap;
-    padding-right: 5vmin;
     font-family: adobeClean-SemiCn;
+    pointer-events: all;
+    margin: 2vmin;
+    text-align: center;
 }
 .menubutton{
     display: none;
@@ -37,10 +35,12 @@
     font-family: Material Icons;
     color: black;
     font-size: xx-large;
+    pointer-events: all;
 }
 .menulist{
     display: none;
     transition: 0.5s ease-in-out;
+    border-radius: 8px;
 }
 
 
@@ -56,7 +56,7 @@
 }
 .visualbar{
     height: 100%;
-    width: 100%;
+    width: 85vw;
     background-color: white;
     /* background: url(../img/rectangle.svg); */
     background-size: cover;
@@ -75,30 +75,32 @@
 
     /* background:url(../img/utatats.jpg); */
 }
+.textcontainer{
+    position: relative;
+    top: unset;
+    margin: 10px;
+}
 h2{
     color: burlywood;
     font-family: adobeClean-ExtraBold;
-    position: absolute;
-    font-size: 8vmin;
+    position: relative;
+    font-size:6.5vmin;
     z-index: 1;
-    left: 13.5vmin;
-    bottom: 30vmin;
+    pointer-events: all;
+    line-height: calc(13.5vmin * 0.45);
 }
 
 h2:hover{
     filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.349));
     cursor: pointer;
 }
-h2::after{
-    content: "Are you thinking about developing a series? Get in touch with one of our team members for an in depth overview.";
+.homeparagraph{
     font-family: adobeClean-Condlt;
-    position: absolute;
-    top: 100%;
-    right: 13.5vmin;
-    font-size: 3.25vmin;
+    position: relative;
+    font-size: 0.67em;
     color: black;
-    width: 73vmin;
     box-sizing: border-box;
+    margin: 20px;
 }
 
 .textblock{
@@ -108,19 +110,17 @@ h2::after{
     position: relative;
     /* min-width: 260px;
     min-height: 200px; */
-    margin:1vh;
     border-radius: 1pc;
     line-height: 1.5;
 }
 .articletext{
-    padding: 1em;
 }
 p{
     font-family: adobeClean-Condlt;
     color: white;
-    padding: 0 2.7em;
     position: absolute;
     top: 73%;
+    margin: 20px;
 }
 .flames{
     height: 14vw;
@@ -139,10 +139,9 @@ p{
 
     .menubutton{
         display: inline;
-        margin-right:27px;
     }
     .menulist.active{
-        display: inline-grid;
+        display: flex;
         flex-direction: column;
         position: absolute;
         top: 13.5vmin;
@@ -170,14 +169,18 @@ p{
         display: none;
     }
     .visualbar{
-        height: 100%;
+        position: absolute;
+    }
+    .textcontainer{
+        position: relative;
+        top: 70vh;
+        margin: 10px;
     }
     .textblock{
         width: initial;
         height: initial;
     }
     .articletext{
-        padding: 0.5em;
     }
     .flames{
         height: 24vw;
@@ -185,17 +188,13 @@ p{
     }
 
     h2{
-        width: initial;
-        padding: 0;
     }
 
 }
 @media only screen and (max-height: 600px){
     h2{
         width: initial;
-        padding: 0;
     }
     h2::after{
-        padding: 2.7em 0 0 0;
     }
 }

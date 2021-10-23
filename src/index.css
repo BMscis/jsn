@@ -1,37 +1,66 @@
 @import url(./fonts.css);
 html{
-    scroll-behavior: smooth;
     font-size: 5vmin;
     box-sizing: border-box;
     /* background: url(./img/bg.svg); */
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 100%;
-    height: auto;
+}
+*{
+    pointer-events: none;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin:0;
+    border-radius: 8px;
 }
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 3px;
+}
+::-webkit-scrollbar-thumb{
+    background:gray;
+    border-radius: 25px;
+
 }
 body{
-    margin:0;
-    max-width: 100%;
-    max-height: 100%;
+    overflow: hidden;
+    height: 100vh;
 }
 body.closed{
     display: flex;
     height: 100vh;
 }
+.container{
+    height: calc(100vh - 13.5vmin);
+    position: absolute;
+    top:13.5vmin;
+    overflow: auto;
+    pointer-events: all;
+    right: 0;
+    left: 0;
+}
 svg{
     width: 100%;
 }
+.home, .content, .profile {
+    height: calc(100vh - 16vmin);
+    padding: calc((15vmin - 13.5vmin) / 2);
+    width: 85vw;
+    background: #ff5722;
+}
+.home{
+}
 .torsoe{
+    position: absolute;
     overflow-y: auto;
     overflow-x: hidden;
     position: relative;
-    height: -webkit-fill-available;
     width: 100%;
     scroll-behavior: smooth;
-
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 
@@ -52,6 +81,5 @@ button{
     .pagetitle {
     }
     /* .home,.content.profile{
-        margin-bottom: 1vh;
     } */
 }

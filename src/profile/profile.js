@@ -65,8 +65,8 @@ function avatarprofiles() {
     var avatar_images = [
         [joyce, 'joycebio', 'Joyce Andika'],
         [mo, 'mobio', 'George Muiruri'],
-        [mary, 'marybio', 'Mary'],
-        [caleb, 'calebio', 'Ca']
+        [mary, 'marybio', 'Mary Uthuma'],
+        [caleb, 'calebio', 'Caleb Oyugi']
     ]
     const avatarul = document.createElement('ul')
     avatarul.classList.add('avatarul')
