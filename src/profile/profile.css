@@ -3,6 +3,11 @@
     flex-direction: row;
     position: relative;
 }
+h3.aboutustext {
+    font-family: 'adobeClean-Light';
+    padding: 10px;
+    border-radius: 4px;
+}
 .ah, .staffprofile{
     width: 50%;
 }
@@ -50,8 +55,11 @@
 .passportblock{
     width: fit-content;
     filter: brightness(0.5);
+    background-color: #FE571F;
     height: fit-content;
+    margin: 5px 10px;
     pointer-events: all;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);
 }
 .passportblock:hover{
     cursor: pointer;
@@ -106,6 +114,10 @@ ul.avatarul {
 }
 .avatarcard p{
     position: unset;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);
+    background-color: #6D2007;
+    border-radius: 4px;
+    padding: 10px;
 }
 @media only screen and (max-width: 1024px){
     .profile{

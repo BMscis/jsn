@@ -18,7 +18,11 @@ function catalog(){
     let pag_til = pagetitle();
     let cardz = card();
     let vdz  =  vd();
-    
+
+    let text = document.createElement('h2')
+    text.innerHTML = "Don't miss a second of action"
+    text.classList.add('catalogtext')
+    catal.appendChild(text)
     catal.appendChild(cardz)
     catal.appendChild(vdz)
     return catal

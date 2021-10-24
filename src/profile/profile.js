@@ -128,7 +128,9 @@ function profile() {
     prof.setAttribute('id', 'aboutus')
     let staff_p = staffprofile();
     let ava_tar = avatarholder();
-
+    let text = document.createElement('h3')
+    text.classList.add('aboutustext')
+    text.innerHTML = 'Get to know more about the team.'
     prof.addEventListener('click', e => {
         let menu_ls = document.getElementsByClassName('menulist')[0]
         if (menu_ls.classList.contains('active')) {
@@ -136,6 +138,7 @@ function profile() {
         }
 
     })
+    prof.appendChild(text)
     prof.appendChild(staff_p);
     prof.appendChild(ava_tar);
 

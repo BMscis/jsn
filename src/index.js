@@ -28,7 +28,7 @@ document.body.classList.add('body');
  container.classList.add('container')
  container.appendChild(tors);
  document.body.appendChild(container)
- window.addEventListener('scroll', e=>{
+ container.addEventListener('scroll', e=>{
      let menu_ls = document.getElementsByClassName('menulist')[0]
      if(menu_ls.classList.contains('active')){
          menu_ls.classList.remove('active')

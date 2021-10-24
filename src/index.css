@@ -45,7 +45,10 @@ svg{
     height: calc(100vh - 16vmin);
     padding: calc((15vmin - 13.5vmin) / 2);
     width: 85vw;
-    background: #ff5722;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 10px;
+
 }
 .home{
 }
@@ -78,8 +81,12 @@ button{
     white-space: nowrap;
 }
 @media only screen and (max-width: 800px){
-    .pagetitle {
-    }
-    /* .home,.content.profile{
-    } */
+        .content{
+            height: auto;
+            flex-direction: row;
+        }
+        #catalog{
+            align-items: center;
+            flex-direction: column;
+        }
 }
